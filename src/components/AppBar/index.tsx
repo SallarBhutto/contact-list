@@ -14,6 +14,7 @@ const AppBar: FC<AppBarProps> = ({ title = "", icon }) => {
       sx={{
         width: `calc(100% - ${drawerWidth}px)`,
         ml: `${drawerWidth}px`,
+        backgroundColor: "#fff",
       }}
     >
       <Toolbar>
