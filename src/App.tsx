@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { store } from "./app/store";
 import Routes from "./routes";
 import { createTheme, ThemeProvider } from "@mui/material";
-import { green, orange } from "@mui/material/colors";
+import { green } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
@@ -13,7 +13,7 @@ const theme = createTheme({
       main: green[400],
     },
     secondary: {
-      main: orange[500],
+      main: green[100],
     },
   },
 });

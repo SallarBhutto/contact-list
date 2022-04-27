@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes as DomRoutes, Route, useLocation } from "react-router-dom";
+import { Routes as DomRoutes, Route } from "react-router-dom";
 import { Contacts, Home, NotFound } from "../pages";
 
 const Routes = () => (

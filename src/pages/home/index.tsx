@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 
-function Contacts() {
+function Home() {
   return (
     <Layout>
       <div>Home page</div>
@@ -9,4 +9,4 @@ function Contacts() {
   );
 }
 
-export default Contacts;
+export default Home;
