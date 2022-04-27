@@ -2,15 +2,15 @@ import React, { FC } from "react";
 import {
   Drawer as MuiDrawer,
   List,
-  Divider,
   ListItemText,
   ListItemIcon,
   ListItem,
   Box,
 } from "@mui/material";
 import logo from "../../assests/images/inventorum_logo.png";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import defaultDrawerItems from "./drawerItems";
+import styled from "styled-components";
 
 export const drawerWidth = 240;
 
@@ -43,9 +43,9 @@ const Drawer: FC = () => {
           <Link to={route}>
             <ListItem button key={displayName}>
               <ListItemIcon>
-                <Icon />
+                <Icon fontSize="small" />
               </ListItemIcon>
-              <ListItemText primary={displayName} />
+              <ListItemText secondary={displayName} />
             </ListItem>
           </Link>
         ))}
@@ -53,5 +53,9 @@ const Drawer: FC = () => {
     </MuiDrawer>
   );
 };
+
+const Link = styled(RouterLink)`
+  text-decoration: none;
+`;
 
 export default Drawer;
