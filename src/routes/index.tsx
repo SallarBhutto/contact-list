@@ -1,12 +1,13 @@
 import React from "react";
-import { Routes as DomRoutes, Route } from "react-router-dom";
-import App from "../App";
-import { Contacts, Home } from "../pages";
+import { Routes as DomRoutes, Route, useLocation } from "react-router-dom";
+import { Contacts, Home, NotFound } from "../pages";
 
 const Routes = () => (
   <DomRoutes>
-    <Route path="/" element={<Home />} />
+    <Route path="/" element={<Contacts />} />
     <Route path="/contacts" element={<Contacts />} />
+    <Route path="/home" element={<Home />} />
+    <Route path="*" element={<NotFound />} />
   </DomRoutes>
 );
 
