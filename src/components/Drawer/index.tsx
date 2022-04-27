@@ -40,7 +40,7 @@ const Drawer: FC = () => {
       </Box>
       <List>
         {defaultDrawerItems.map(({ displayName, route, Icon }) => (
-          <Link to={route}>
+          <Link key={`${displayName}-${Math.random()}`} to={route}>
             <ListItem button key={displayName}>
               <ListItemIcon>
                 <Icon fontSize="small" />
