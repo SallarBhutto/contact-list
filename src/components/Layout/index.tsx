@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import { Box, CssBaseline, Container } from "@mui/material";
-import styled from "@mui/styled-engine";
+import styled from "styled-components";
 import Drawer from "../Drawer";
 import AppBar from "../AppBar";
 
@@ -10,20 +10,25 @@ export interface LayoutProps {
 }
 const Layout: FC<LayoutProps> = ({ variant = "default", children }) => {
   return (
-    <Box sx={{ display: "flex", backgroundColor: "grey" }}>
+    <Box component="div" sx={{ display: "flex", backgroundColor: "grey" }}>
       <CssBaseline />
       <AppBar />
       <Drawer />
-      <Container
+      <ContentContainer
         style={{
           marginTop: 80,
           paddingLeft: 0,
         }}
       >
         {children}
-      </Container>
+      </ContentContainer>
     </Box>
   );
 };
+
+const ContentContainer = styled(Container)`
+  margin-top: 80;
+  padding-left: 0;
+`;
 
 export default Layout;
