@@ -1,22 +1,18 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
-import { store } from "./app/store";
+import { cleanup, render, screen } from "@testing-library/react";
 import Routes from "./routes";
-import { ThemeProvider } from "@mui/material";
-import { theme } from "./App";
+import Providers from "./providers";
 
-test("renders learn react link", () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Routes></Routes>
-        </BrowserRouter>
-      </ThemeProvider>
-    </Provider>
-  );
+describe("App", () => {
+  afterEach(cleanup);
+  it("should render app component with Home in the drawer", async () => {
+    render(
+      <Providers>
+        <Routes />
+      </Providers>
+    );
+    const homeDrawerItem = screen.getByText(/Home/i);
 
-  expect(getByText(/Home/i)).toBeInTheDocument();
+    expect(homeDrawerItem).toBeInTheDocument();
+  });
 });
