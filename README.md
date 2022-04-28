@@ -5,30 +5,30 @@ This project is using:
 <table>
     <tbody>
         <tr>
-            <td >Language: -></td>
+            <td style="font-weight:bold" >Language: -></td>
             <td >TypeScript</td>
         </tr>
         <tr>
-            <td>State Management:</td>
+            <td style="font-weight:bold" >State Management:</td>
             <td>Redux</td>
             <td>Redux-toolkit</td>
         </tr>
          <tr>
-            <td>Styles/UI Components:</td>
+            <td style="font-weight:bold" >Styles/UI Components:</td>
             <td>Material UI</td>
             <td>styled-components</td>
         </tr>
         <tr>
-            <td>Testing:</td>
+            <td style="font-weight:bold" >Testing:</td>
             <td>React testing library</td>
             <td>Jest</td>
         </tr>
         <tr>
-            <td>Containerization:</td>
+            <td style="font-weight:bold" >Containerization:</td>
             <td>Docker</td>
         </tr>
         <tr>
-            <td>HTTP client:</td>
+            <td style="font-weight:bold" >HTTP client:</td>
             <td>axios</td>
         </tr>
     </tbody>
