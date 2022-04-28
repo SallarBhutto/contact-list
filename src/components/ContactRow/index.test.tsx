@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, cleanup } from "@testing-library/react";
-import { ContactRow } from "..";
+import ContactRow from "./index";
 import { Contact } from "../../features/contacts/contactsSlice";
 
 const dummyProps: Contact = {
@@ -37,7 +37,7 @@ describe("Contact row", () => {
     delete contactProps.department;
     delete contactProps.contribution;
 
-    render(<ContactRow contact={dummyProps} />);
+    render(<ContactRow contact={contactProps} />);
     const departmentElement = screen.getByText(/Department/i);
     const contributionlement = screen.getByText(/0.00 Є/i);
 
