@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+This project is using:
 
-## Available Scripts
+<table>
+    <tbody>
+        <tr>
+            <td >Language: -></td>
+            <td >TypeScript</td>
+        </tr>
+        <tr>
+            <td>State Management:</td>
+            <td>Redux</td>
+            <td>Redux-toolkit</td>
+        </tr>
+         <tr>
+            <td>Styles/UI Components:</td>
+            <td>Material UI</td>
+            <td>styled-components</td>
+        </tr>
+        <tr>
+            <td>Testing:</td>
+            <td>React testing library</td>
+            <td>Jest</td>
+        </tr>
+        <tr>
+            <td>Containerization:</td>
+            <td>Docker</td>
+        </tr>
+        <tr>
+            <td>HTTP client:</td>
+            <td>axios</td>
+        </tr>
+    </tbody>
+</table>
 
-In the project directory, you can run:
+**Notes are the end of this file.**
 
-### `npm start`
+# Set up
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Clone this repo via `git clone https://github.com/SallarBhutto/contact-list.git`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Locally
 
-### `npm test`
+- Step1: In the project directory run `npm install`
+- Step2: Run `npm start` to run the project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Docker
 
-### `npm run build`
+- Step1: In the project directory run `docker build -t inventorum:latest .`
+- Step2: Run `docker run --name inventorum -d -p 3000:3000 inventorum:latest`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Run `npm run build` to build the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Test
 
-### `npm run eject`
+- Run `npm test` to start the test runner in watch mode.
+- Run `npm test -- --coverage` for test coverage report.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Notes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- path `/` has the contact page.
+- path `/contacts` also has the contact page.
+- Contact page has the search input, add button and contactList.
+- Mui Icons and Public logo of inventorum instead of assests provided.
+- Focused on architecture and reusability.
+- Remaining items:
+  - Search
+  - Add and Edit contact
