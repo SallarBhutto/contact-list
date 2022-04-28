@@ -66,6 +66,7 @@ This project is using:
 - Contact page has the search input, add button and contactList.
 - Mui Icons and Public logo of inventorum instead of assests provided.
 - Focused on architecture and reusability.
+- Added test cases for few of the components as samples.
 - Remaining items:
   - Search
   - Add and Edit contact
