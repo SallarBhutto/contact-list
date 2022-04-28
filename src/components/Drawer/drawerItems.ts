@@ -1,6 +1,7 @@
 import {
     MoveToInbox,
     MailOutline,
+    ContactsOutlined,
     SvgIconComponent
 } from "@mui/icons-material";
 
@@ -24,7 +25,7 @@ const defaultDrawerItems: DrawerItem[] = [
     {
         displayName: 'Contacts',
         route: '/contacts',
-        Icon: MoveToInbox
+        Icon: ContactsOutlined
     },
     {
         displayName: 'Orders',
